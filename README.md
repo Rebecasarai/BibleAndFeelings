@@ -4,7 +4,7 @@
 ## English
 
 
-BibleAndFeelings is a maven project, that depending on the feeling the user is having, and selecting the feeling from the menu, displays a random versicule that covers about, for example, braveness in particular. A lot of versicules are available to read, so you can read multiple versicules of the same feeling, each time. This Console-Jar Application is a great homework to learn how to use Maven and the commands mvn, svn and git.
+BibleAndFeelings is a maven project, that depending on the feeling the user is having, and selecting the feeling from the menu, displays a random verse that covers about, for example, braveness in particular. A lot of verses are available to read, so you can read multiple verses of the same feeling, each time. This Console-Jar Application is a great homework to learn how to use Maven and the commands mvn, svn and git.
 
 ### How to set it to work and edit it
 
