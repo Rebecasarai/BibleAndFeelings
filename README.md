@@ -18,7 +18,7 @@ $ mvn package
 
 ### What did I used?
 
-I used Maven, as described below, eclipse and git.
+I used Maven, as described above, eclipse and git.
 
 
 #### I used eclipse at creating it with:
