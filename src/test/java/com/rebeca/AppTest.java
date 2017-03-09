@@ -20,6 +20,7 @@ public class AppTest
 		  assertEquals("42:6", v.getNumVersiculo());
 		  assertEquals("Yo Jehová te he llamado en justicia, y te sostendré por la mano; te guardaré y te pondré por pacto al pueblo, por luz de las naciones.", v.getVersiculo());
 		  
+		  
  }
 	
 	
