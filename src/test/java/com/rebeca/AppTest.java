@@ -1,7 +1,9 @@
 package com.rebeca;
 
 
-import junit.framework.Test;
+import static org.junit.Assert.assertEquals;
+import org.junit.Assert;
+import org.junit.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
@@ -11,31 +13,15 @@ import junit.framework.TestSuite;
 public class AppTest 
     extends TestCase
 {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
-
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
+	@Test
+	  public void testPrintHola() {
+		Versiculos v = new Versiculos("Isaias", "42:6", "Yo Jehová te he llamado en justicia, y te sostendré por la mano; te guardaré y te pondré por pacto al pueblo, por luz de las naciones.");
+		  assertEquals("Isaias", v.getLibro());
+		  assertEquals("42:6", v.getNumVersiculo());
+		  assertEquals("Yo Jehová te he llamado en justicia, y te sostendré por la mano; te guardaré y te pondré por pacto al pueblo, por luz de las naciones.", v.getVersiculo());
+		  
+    
+ }
     
     
 	

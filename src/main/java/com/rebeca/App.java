@@ -2,19 +2,16 @@ package com.rebeca;
 
 
 import java.io.*;
-import java.util.Random;
+import java.util.*;
 
-/**
- * Generate a unique number
- *
- */
 public class App{
 	private BufferedReader teclado=new BufferedReader(new InputStreamReader(System.in));
+	private Vector<Versiculos> versiculosAdded=new Vector<Versiculos>();
 	
 
     public static void main( String[] args ) throws IOException
     {
-    	  System.out.println();
+    	  System.out.println("");
     	  System.out.println("Uno de los regalos que Dios nos ha dado es su palabra en forma de la Biblia. En ella podemos encontrar la verdad sobre Dios, consejos para el diario vivir y esperanza para mañana. Leerla es tan refrescante como tomarse un vaso de agua.");
     	  System.out.println("");
     	  App a = new App();
@@ -36,6 +33,7 @@ public class App{
 			 System.out.println("5. Valentia");
 			 System.out.println("6. Superar la tristeza");
 			 System.out.println("7. Eliminar los celos");
+			 System.out.println("8. Añadir Versiculo");
 			 System.out.println("0. salir");
 			 System.out.println("");
 			 try{
@@ -70,6 +68,9 @@ public class App{
 			case 7:
 				eliminarCelos();
 				break;
+			case 8:
+				addVersiculo();
+				break;
 			case 0:
 				System.out.println("Dios te acompañe y guie. Ha salido del menú");
 				break;
@@ -81,6 +82,16 @@ public class App{
 		
 		
 	}
+    
+    private void addVersiculo() throws IOException {
+		Versiculos v = new Versiculos();
+		v.pedirVersiculo();
+		
+		versiculosAdded.addElement(v);
+		
+	}
+    
+   
 
 	private void amor() {
 		Random rand = new Random();

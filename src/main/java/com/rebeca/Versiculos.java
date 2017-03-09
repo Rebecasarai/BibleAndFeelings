@@ -1,6 +1,132 @@
 package com.rebeca;
 
+import java.io.*;
+
 public class Versiculos {
+	private BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
+	//atributos
+		private String libro;
+		private String numVersiculo;
+		private String versiculo;
+	
+	public Versiculos(String libro, String numVersiculo, String versiculo) {
+			super();
+			this.libro = libro;
+			this.numVersiculo = numVersiculo;
+			this.versiculo = versiculo;
+		}
+
+	public Versiculos() {
+		super();
+	}
+	
+	@Override
+	public String toString() {
+		return "Versiculos [libro=" + libro + ", numVersiculo=" + numVersiculo + ", versiculo=" + versiculo + "]";
+	}
+	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((libro == null) ? 0 : libro.hashCode());
+		result = prime * result + ((numVersiculo == null) ? 0 : numVersiculo.hashCode());
+		result = prime * result + ((versiculo == null) ? 0 : versiculo.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Versiculos other = (Versiculos) obj;
+		if (libro == null) {
+			if (other.libro != null)
+				return false;
+		} else if (!libro.equals(other.libro))
+			return false;
+		if (numVersiculo == null) {
+			if (other.numVersiculo != null)
+				return false;
+		} else if (!numVersiculo.equals(other.numVersiculo))
+			return false;
+		if (versiculo == null) {
+			if (other.versiculo != null)
+				return false;
+		} else if (!versiculo.equals(other.versiculo))
+			return false;
+		return true;
+	}
+
+	public void pedirVersiculo() throws IOException{
+		System.out.println("Indique el libro al que pertenece el versiculo.");
+		this.libro = teclado.readLine();
+		System.out.println("Indique el cápitulo y número");
+		this.numVersiculo = teclado.readLine();
+		System.out.println("Escriba el versiculo");
+		this.versiculo = teclado.readLine();
+		
+	}
+	public String getLibro() {
+		return libro;
+	}
+
+	public void setLibro(String libro) {
+		this.libro = libro;
+	}
+
+	public String getNumVersiculo() {
+		return numVersiculo;
+	}
+
+	public void setNumVersiculo(String numVersiculo) {
+		this.numVersiculo = numVersiculo;
+	}
+
+	public String getVersiculo() {
+		return versiculo;
+	}
+
+	public void setVersiculo(String versiculo) {
+		this.versiculo = versiculo;
+	}
+
+	public static String[] getEsperanza() {
+		return ESPERANZA;
+	}
+
+	public static String[] getFe() {
+		return FE;
+	}
+
+	public static String[] getAmor() {
+		return AMOR;
+	}
+
+	public static String[] getAnimo() {
+		return ANIMO;
+	}
+
+	public static String[] getValentia() {
+		return VALENTIA;
+	}
+
+	public static String[] getDeletecelos() {
+		return DELETECELOS;
+	}
+
+	public static String[] getDeletetristeza() {
+		return DELETETRISTEZA;
+	}
+
+
+
+
+
 	public static final String  ESPERANZA[] = {
             "Pero los que confían en el Señor\nrenovarán sus fuerzas;\nvolarán como las águilas:\ncorrerán y no se fatigarán,\ncaminarán y no se cansarán.\n― Isaías 40:31",
             "El Señor te protegerá;\nde todo mal protegerá tu vida.\nEl Señor te cuidará en el hogar y en el camino,\ndesde ahora y para siempre.― Salmos 121:7-8",
@@ -62,4 +188,7 @@ public class Versiculos {
             "Cercano está el SEÑOR a los quebrantados de corazón, y salva a los abatidos de espíritu.\n-Salmos 34:18",
               
             }; 
+	
+	
+	
 }
